@@ -1,0 +1,16 @@
+{
+  "name": "fake-install",
+  "version": "1.0.0",
+  "main": "main.js",
+  "bin": {
+    "fake-install": "./bin/fake-install.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/fake-install.js"
+  },
+  "keywords": [],
+  "author": "Leonardo Garzon <lgarzonlc@gmail.com>",
+  "license": "MIT",
+  "description": "A fake terminal installation simulator"
+}

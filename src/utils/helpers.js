@@ -20,9 +20,24 @@ function randomDelay(min=50, max=200) {
     return new Promise((resolve) => setTimeout(resolve, randomInt(min, max)))
 }
 
+// FORMATTING HELPERS
+
+/**
+ * Formats a number of bytes into a human-readable string.
+ * Returns a string with units of MB, kB, or B.
+ * @param {number} bytes - The number of bytes to format.
+ * @returns {string} A human-readable string representing the number of bytes.
+ */
+function formatBytes(bytes) {
+    if (bytes >= 1_000_000) return `${(bytes / 1_000_000).toFixed(1)} MB`;
+    if (bytes >= 1_000)     return `${(bytes / 1_000).toFixed(1)} kB`;
+    return `${bytes} B`;
+}
+
 module.exports = {
     randomInt,
     randomFloat,
     randomPick,
-    randomDelay
+    randomDelay,
+    formatBytes
 }

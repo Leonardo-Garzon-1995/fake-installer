@@ -192,6 +192,7 @@ module.exports = {
     randomVersion,
     randomFileSize,
     randomSpeed,
+    randomHex,
     randomMd5,
     randomSha256,
     randomMirrorUrl,

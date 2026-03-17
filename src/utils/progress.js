@@ -109,7 +109,7 @@ async function stepList(steps) {
     for (const step of steps) {
         const [minMs, maxMs] = step.duration ?? [400, 1200];
         const durationMs = randomInt(minMs, maxMs);
-        await spinner(step.label, durationMs, step.doneLabel ?? step.label);
+        await spinner(step.label, durationMs, step.doneLabel ?? step.donelabel);
     }
 }
 

@@ -1,7 +1,7 @@
 // Progress bars and spinners renderer 
 
 const {randomInt, randomFloat, randomDelay, formatBytes} = require('./helpers')
-const { overwriteLine, println, Clrs, Combos} = require('./colors')
+const { overwriteLine, println, Clrs, Combos, spacer} = require('./colors')
 
 // PROGRESS BAR
 
@@ -27,7 +27,7 @@ async function progressBar(label, suffix='', options={}) {
         minDelay=30,
         maxDelay=120,
         fillChar='█',
-        emptychar='░'
+        emptyChar='░'
     } = options
 
     for (let i = 0; i <= steps; i++) {
@@ -35,9 +35,9 @@ async function progressBar(label, suffix='', options={}) {
         const filled = Math.round((i / steps) * BAR_WIDTH)
         const empty = BAR_WIDTH - filled
 
-        const bar = Clrs.green(fillChar.repeat(filled)) + Clrs.gray(emptychar.repeat(empty))
+        const bar = Clrs.green(fillChar.repeat(filled)) + Clrs.gray(emptyChar.repeat(empty))
         const pct = String(percent).padStart(3, ' ')
-        const labelPad = label.padEnd(26, ' ')
+        const labelPad = label.padEnd(36, ' ')
 
         // Sufix can change per step
         const liveSuffix = typeof suffix === 'function' ? suffix(percent) : suffix
@@ -67,6 +67,7 @@ async function progressBar(label, suffix='', options={}) {
 async function progressBarSequence(items) {
     for (let item of items) {
         await progressBar(item.label, item.suffix ?? '', item.options ?? {})
+        spacer()
     }
 }
 

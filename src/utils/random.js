@@ -1,6 +1,6 @@
 // Random data generator
 
-const { randomPick, randomDelay, randomFloat, randomInt } = require('./helpers')
+const { randomPick, randomFloat, randomInt } = require('./helpers')
 
 // ______Packages Names______
 
@@ -197,5 +197,6 @@ module.exports = {
     randomSha256,
     randomMirrorUrl,
     randomSourceFile,
-    randomTestName
+    randomTestName,
+    randomAssetName
 }

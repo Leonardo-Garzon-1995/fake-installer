@@ -1,16 +1,24 @@
 {
-  "name": "fake-install",
+  "name": "fake-installer",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "bin/fake-install.js",
   "bin": {
-    "fake-install": "./bin/fake-install.js"
+    "fake-installer": "./bin/fake-install.js",
+    "fke-install": "./bin/fake-install.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/fake-install.js"
   },
-  "keywords": [],
+  "keywords": ["cli", "fake", "install", "installer", "terminal"],
   "author": "Leonardo Garzon <lgarzonlc@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leonardo-Garzon-1995/fake-installer"
+  },
+  "bugs": {
+    "url": "https://github.com/Leonardo-Garzon-1995/fake-installer/issues"
+  },
+  "homepage": "https://github.com/Leonardo-Garzon-1995/fake-installer#readme",
   "description": "A fake terminal installation simulator"
 }

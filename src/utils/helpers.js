@@ -56,7 +56,7 @@ function printWelcome(stages) {
     spacer();
     println(Combos.boldCyan('╔══════════════════════════════════════════════════════════╗'));
     println(Combos.boldCyan('║') + '                                                          ' + Combos.boldCyan('║'));
-    println(Combos.boldCyan('║') + '    ' + Combos.boldGreen('install-nothing') + Clrs.gray('  ·  fake install simulator').padEnd(48) + Combos.boldCyan('║'));
+    println(Combos.boldCyan('║') + '    ' + Combos.boldGreen('Fake Installer') + Clrs.gray('  ·  fake install simulator').padEnd(49) + Combos.boldCyan('║'));
     println(Combos.boldCyan('║') + '                                                          ' + Combos.boldCyan('║'));
     println(Combos.boldCyan('║') + '    ' + muted('Stages: ') + Clrs.cyan(stages).padEnd(55) + Combos.boldCyan('║'));
     println(Combos.boldCyan('║') + '                                                          ' + Combos.boldCyan('║'));
@@ -70,14 +70,14 @@ function printWelcome(stages) {
 
 function displayHelpScreen() {
     spacer();
-    println(Combos.boldGreen('fake-install') + Clrs.gray('  ·  fake install simulator'));
+    println(Combos.boldGreen('fake-installer') + Clrs.gray('  ·  fake install simulator'));
     spacer();
     println(Clrs.cyan('Usage:'));
-    println('  ' + Clrs.gray('fake-install') + '                     Run all stages in a loop');
-    println('  ' + Clrs.gray('fake-install compile tests') + '       Run only the compile and tests stages');
-    println('  ' + Clrs.gray('fake-install --only apt compile') + '  Same as above, explicit flag');
-    println('  ' + Clrs.gray('fake-install --exclude optimize') + '  Skip the optimize stage');
-    println('  ' + Clrs.gray('fake-install --random') + '            Randomise stage order each cycle');
+    println('  ' + Clrs.gray('fake-installer') + '                     Run all stages in a loop');
+    println('  ' + Clrs.gray('fake-installer compile tests') + '       Run only the compile and tests stages');
+    println('  ' + Clrs.gray('fake-installer --only apt compile') + '  Same as above, explicit flag');
+    println('  ' + Clrs.gray('fake-installer --exclude optimize') + '  Skip the optimize stage');
+    println('  ' + Clrs.gray('fake-installer --random') + '            Randomise stage order each cycle');
     spacer();
     println(Clrs.cyan('Stages:'));
     println('  ' + Clrs.cyan('apt') + '       APT package manager simulation');

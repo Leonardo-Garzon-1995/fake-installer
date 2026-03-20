@@ -1,6 +1,6 @@
 {
   "name": "fake-installer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "bin/fake-install.js",
   "bin": {
     "fake-installer": "bin/fake-install.js",

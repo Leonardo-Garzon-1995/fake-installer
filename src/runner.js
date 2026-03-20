@@ -1,7 +1,7 @@
 // Orchestrates the simulation loop — cycles through stages endlessly
 
 const { randomDelay, printWelcome } = require('./utils/helpers')
-const { println, Styles, Combos, Clrs, muted, hideCursor, showCursor } = require('./utils/colors')
+const { println, Clrs} = require('./utils/colors')
 const runApt = require('./stages/apt')
 const runCompile = require('./stages/compile')
 const runTests = require('./stages/test')
@@ -16,12 +16,12 @@ const ALL_STAGES = [
 ]
 
 /**
- * Starts the endless simulation loop.
+ * Starts the endless simulation loop of stages.
  *
  * @param {object} options
  * @param {string[]} options.only     - If set, only run stages with these names
  * @param {string[]} options.exclude  - Stage names to skip
- * @param {boolean}  options.random   - If true, randomise stage order each cycle
+ * @param {boolean}  options.random   - If true, randomize stage order each cycle
  */
 async function startRunner(options={}) {
     const {only=[], exclude=[], random=false} = options

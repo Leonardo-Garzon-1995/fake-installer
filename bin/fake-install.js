@@ -2,7 +2,7 @@
 
 const startRunner = require('../src/runner')
 const { displayHelpScreen, randomPick} = require('../src/utils/helpers')
-const { showCursor, hideCursor, println, spacer, Combos, Clrs, muted, divider} = require('../src/utils/colors')
+const { showCursor, hideCursor, println, spacer, Combos, Clrs, divider} = require('../src/utils/colors')
 
 const [,, ...args] = process.argv
 
@@ -53,7 +53,7 @@ while (i < args.length) {
             if (VALID_STAGES.includes(arg.toLowerCase())) {
                 options.only.push(arg.toLowerCase());
             } else {
-                println(yellow(`⚠  Unknown argument: "${arg}" — ignoring.`));
+                println(Clrs.yellow(`⚠  Unknown argument: "${arg}" — ignoring.`));
             }
     }
 

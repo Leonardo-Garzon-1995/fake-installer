@@ -3,18 +3,24 @@
   "version": "1.0.0",
   "main": "bin/fake-install.js",
   "bin": {
-    "fake-installer": "./bin/fake-install.js",
-    "fke-install": "./bin/fake-install.js"
+    "fake-installer": "bin/fake-install.js",
+    "fke-install": "bin/fake-install.js"
   },
   "scripts": {
     "start": "node ./bin/fake-install.js"
   },
-  "keywords": ["cli", "fake", "install", "installer", "terminal"],
+  "keywords": [
+    "cli",
+    "fake",
+    "install",
+    "installer",
+    "terminal"
+  ],
   "author": "Leonardo Garzon <lgarzonlc@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leonardo-Garzon-1995/fake-installer"
+    "url": "git+https://github.com/Leonardo-Garzon-1995/fake-installer.git"
   },
   "bugs": {
     "url": "https://github.com/Leonardo-Garzon-1995/fake-installer/issues"

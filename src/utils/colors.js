@@ -1,3 +1,4 @@
+const readline = require('readline')
 // ANSI colors helpers
 
 // Reset
@@ -90,7 +91,11 @@ const showCursor = () => process.stdout.write('\x1b[?25h')
 const println = (str) => process.stdout.write(str + '\n')
 
 // Overwrites ccurrent line (for progress updates)
-const overwriteLine = (str) => process.stdout.write(CR + str + clearLine)
+const overwriteLine = (str) => {
+    readline.cursorTo(process.stdout, 0)
+    readline.clearLine(process.stdout, 0)
+    process.stdout.write(str)
+}
 
 // Spacer (print a blank line)
 const spacer = () => println('')
